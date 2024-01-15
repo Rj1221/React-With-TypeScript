@@ -50,6 +50,16 @@ people = [
     roll: 2,
   },
 ];
+// Type Inference
+let age1 = 24;
+// age1 = "Hello"; // Error Because As in The Starting i assign the integer Value with the age1 variable as an integer so it will not accept the string value
+
+// Union Type
+let username: string | number = "John";
+username = 24;
+
+let users: string | string[];
+users = ["John", "Fred"];
 
 // Type Alias
 type Person = {
@@ -60,7 +70,3 @@ let person1: Person = {
   name: "John",
   age: 24,
 };
-
-// Type Inference
-let age1 = 24;
-// age1 = "Hello"; // Error Because As in The Starting i assign the integer Value with the age1 variable as an integer so it will not accept the string value

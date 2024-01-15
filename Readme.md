@@ -1,3 +1,46 @@
+### 1. [**What is TypeScript?**](#what-is-typescript)
+
+- [Introduction](#what-is-typescript)
+- [Benefits](#why-typescript)
+
+### 2. [**Getting Started**](#installing-and-using-typescript)
+
+- [Installing TypeScript](#installing-and-using-typescript)
+- [Compiling TypeScript](#compiling-typescript)
+- [Running TypeScript](#running-typescript)
+
+### 3. [**TypeScript Types**](#typescript-types)
+
+- [Primitive Types](#primitive-types)
+  - [Boolean](#boolean)
+  - [Number](#number)
+  - [String](#string)
+  - [Null](#null)
+  - [Undefined](#undefined)
+- [Examples For Primitive Types](#examples-for-primitive-types)
+- [Complex Types](#complex-types)
+  - [Array](#array)
+  - [Object](#object)
+- [Function Types](#function-types)
+  - [Function](#function)
+- [Any Type](#any-type)
+
+### 4. [**Type Alias**](#type-alias)
+
+- [Example](#type-alias-example)
+
+### 5. [**Type Inference**](#type-inference)
+
+- [Example](#type-inference-example)
+
+### 6. [**Type Interface**](#type-interface)
+
+- [Example](#type-interface-example)
+
+### 7. [**Union Type**](#union-type)
+
+- [Example](#union-type-example)
+
 #### What is TypeScript?
 
 TypeScript is a superset of JavaScript which primarily provides optional static typing, classes and interfaces. One of the big benefits is to enable IDEs to provide a richer environment for spotting common errors as you type the code.In Simple Words its a Super Set of JavaScript.
@@ -7,7 +50,7 @@ It adds static typing to the language. Static typing is a way to describe the sh
 
 TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. It offers classes, modules, and interfaces to help you build robust components. The TypeScript language specification has full details about the language.
 
-#### Installing TypeScript and Using TypeScript
+#### Installing and Using TypeScript
 
 ```bash
 npm install -g typescript
@@ -73,17 +116,28 @@ Object
 Function Types
 ```
 
-```bash
+````bash
 Function
-```
+```typescript
+function add(x: number, y: number): number {
+  return x + y;
+}
+````
+
+````
+
 
 ```bash
 Any Type (It will allow any type of value)
-```
+````
 
 **Note:** Any type is not recommended to use in TypeScript.
 
 #### Type Alias
+
+Type alias is a way to create a new name for a type. Type aliases are sometimes similar to interfaces, but can name primitives, unions, tuples, and any other types that you’d otherwise have to write by hand. Let’s see an example of type alias.
+
+#### Type Alias Example
 
 ```typescript
 type StringOrNumber = string | number;
@@ -101,13 +155,22 @@ type Student = {
 };
 ```
 
-#### Type Inferance
+#### Type Inference
+
+Type inference is a way to define a type without explicitly stating the type. TypeScript compiler will infer the type based on the value assigned to the variable. Let’s see an example of type inference.
+
+#### Type Inference Example
 
 ```typescript
-
+let age1 = 24;
+// age1 = "Hello"; // Error Because As in The Starting i assign the integer Value with the age1 variable as an integer so it will not accept the string value
 ```
 
 #### Type Interface
+
+Type interface is a way to define a type using an interface keyword. It is similar to defining a type using type keyword with a few differences. The main difference is that type interface can be named and hence can be reused. Let’s see an example of type interface.
+
+#### Type Interface Example
 
 ```typescript
 interface Student {
@@ -122,4 +185,17 @@ interface Student {
   };
   getFullName: (name: string, surname: string) => string;
 }
+```
+
+#### Union Type
+
+Union types are a powerful way to express a value that can be one of the several types. We use the vertical bar (|) to separate each type, so number | string | boolean is the type of a value that can be a number, a string, or a boolean.
+
+#### Union Type Example
+
+```typescript
+let unionType: number | string; // Declaring a union type variable
+unionType = 10; // OK
+unionType = "Hello World"; // OK
+unionType = true; // Compiler Error: Type 'true' is not assignable to type 'string | number'.
 ```
