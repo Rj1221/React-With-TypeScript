@@ -39,6 +39,27 @@ Null
 Undefined
 ```
 
+#### Examples For Primitive Types
+
+```typescript
+let isDone: boolean = false;
+let decimal: number = 6;
+let color: string = "blue";
+let list: number[] = [1, 2, 3];
+let x: [string, number] = ["hello", 10];
+enum Color {
+  Red,
+  Green,
+  Blue,
+}
+let c: Color = Color.Green;
+let notSure: any = 4;
+notSure = "maybe a string instead";
+notSure = false; // okay, definitely a boolean
+let list: any[] = [1, true, "free"];
+list[1] = 100;
+```
+
 ```bash
 Complex Types
 ```
@@ -58,4 +79,47 @@ Function
 
 ```bash
 Any Type (It will allow any type of value)
+```
+
+**Note:** Any type is not recommended to use in TypeScript.
+
+#### Type Alias
+
+```typescript
+type StringOrNumber = string | number;
+type Student = {
+  name: string;
+  age: number;
+  hobbies: string[];
+  role: [number, string];
+  address: {
+    city: string;
+    state: string;
+    country: string;
+  };
+  getFullName: (name: string, surname: string) => string;
+};
+```
+
+#### Type Inferance
+
+```typescript
+
+```
+
+#### Type Interface
+
+```typescript
+interface Student {
+  name: string;
+  age: number;
+  hobbies: string[];
+  role: [number, string];
+  address: {
+    city: string;
+    state: string;
+    country: string;
+  };
+  getFullName: (name: string, surname: string) => string;
+}
 ```

@@ -50,3 +50,17 @@ people = [
     roll: 2,
   },
 ];
+
+// Type Alias
+type Person = {
+  name: string;
+  age: number;
+};
+let person1: Person = {
+  name: "John",
+  age: 24,
+};
+
+// Type Inference
+let age1 = 24;
+// age1 = "Hello"; // Error Because As in The Starting i assign the integer Value with the age1 variable as an integer so it will not accept the string value
