@@ -70,3 +70,33 @@ let person1: Person = {
   name: "John",
   age: 24,
 };
+
+// Function and Types
+
+function add(a: number, b: number) {
+  return a + b;
+}
+
+let sum = add(2, 3);
+console.log(sum);
+
+// Function Return Types
+function add1(a: number, b: number): number {
+  return a + b;
+}
+
+let sum1 = add1(2, 3);
+console.log(sum1);
+
+let add2: (a: number, b: number) => number;
+add2 = (a: number, b: number) => {
+  return a + b;
+};
+
+// Function with Void Return Type
+
+function sayHello(name: string): void {
+  console.log("Hello " + name);
+}
+
+sayHello("John");

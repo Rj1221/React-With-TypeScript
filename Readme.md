@@ -41,6 +41,10 @@
 
 - [Example](#union-type-example)
 
+### 8.[**Function and Type**](#function-and-type)
+
+- [Example](#function-and-type-example)
+
 #### What is TypeScript?
 
 TypeScript is a superset of JavaScript which primarily provides optional static typing, classes and interfaces. One of the big benefits is to enable IDEs to provide a richer environment for spotting common errors as you type the code.In Simple Words its a Super Set of JavaScript.
@@ -195,7 +199,26 @@ Union types are a powerful way to express a value that can be one of the several
 
 ```typescript
 let unionType: number | string; // Declaring a union type variable
-unionType = 10; // OK
 unionType = "Hello World"; // OK
+unionType = 10; // OK
 unionType = true; // Compiler Error: Type 'true' is not assignable to type 'string | number'.
+```
+
+#### Function and Type
+
+In TypeScript, both the arguments and the return type of a function can be typed. Let’s see an example of a typed function.
+
+#### Function and Type Example
+
+```typescript
+function add(x: number, y: number) {
+  return x + y;
+}
+function add(x: number, y: number): number {
+  return x + y;
+}
+let add3: (a: number, b: number) => number;
+add3 = (a: number, b: number) => {
+  return a + b;
+};
 ```
