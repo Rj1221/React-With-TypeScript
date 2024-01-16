@@ -1,26 +1,20 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "target": "es5", // es5, es6, es2015, es2016, es2017, es2018, es2019, es2020, esnext
+    "lib": ["dom", "dom.iterable", "esnext"], // dom, dom.iterable, es5, es6, es2015, es2016, es2017, es2018, es2019, es2020, esnext
+    "allowJs": true, // allow javascript files to be compiled
+    "skipLibCheck": true, // skip type checking of all declaration files (*.d.ts)
+    "esModuleInterop": true, // emit additional JavaScript to ease support for importing CommonJS modules
+    "allowSyntheticDefaultImports": true, // allow default imports from modules with no default export
+    "strict": true, // enable all strict type checking options
+    "forceConsistentCasingInFileNames": true, // ensure that casing is correct in imports
+    "noFallthroughCasesInSwitch": true, // report errors for fallthrough cases in switch statement
+    "module": "esnext", // specify module code generation
+    "moduleResolution": "node", // resolve modules using Node.js style
+    "resolveJsonModule": true, // include modules imported with .json extension
+    "isolatedModules": true, // ensure that each file can be safely transpiled without relying on other imports
+    "noEmit": true, // do not emit output
+    "jsx": "react-jsx" // support JSX in .tsx files
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"] // files to include
 }
